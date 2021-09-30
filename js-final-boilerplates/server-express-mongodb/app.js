@@ -5,6 +5,7 @@ var logger = require("morgan");
 var cors = require("cors");
 var mongoose = require("mongoose");
 
+
 var tasksRouter = require("./routes/tasks");
 
 var app = express();
@@ -26,7 +27,7 @@ app.use("/tasks", tasksRouter);
 
 //var mongoDB = "mongodb://127.0.0.1/database";
 var mongoDB =
-  "mongodb://dbuser:zyKfuq68R8L4wgDk@cluster0-shard-00-00.f0ul2.mongodb.net:27017,cluster0-shard-00-01.f0ul2.mongodb.net:27017,cluster0-shard-00-02.f0ul2.mongodb.net:27017/tasks?ssl=true&replicaSet=atlas-8cxe5c-shard-0&authSource=admin&retryWrites=true&w=majority";
+  "";
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
