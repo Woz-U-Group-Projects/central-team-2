@@ -11,7 +11,6 @@ export class AppComponent {
     { title: 'Trips', url: '/trips'},
     { title: 'POIs', url: '/pois'},
     { title: 'Favorites', url: '/favs'},
-    { title: 'Cover', url: ''},
   ];
  
   constructor() {}
