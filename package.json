@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "typescript": "2.8"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
   }
 }
