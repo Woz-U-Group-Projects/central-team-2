@@ -7,10 +7,15 @@ import { AppComponent } from "./app.component";
 
 import { NavigationBarComponent } from './navigation-bar/nav-bar.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { LoginComponent } from './login/login.component';
+import { TripsComponent } from './trips/trips.component';
+import { MytripsComponent } from './mytrips/mytrips.component';
+import { POIsComponent } from './pois/pois.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 @NgModule({
-  declarations: [AppComponent, NavigationBarComponent, MainPageComponent],
+  declarations: [AppComponent, NavigationBarComponent, MainPageComponent, LoginComponent, TripsComponent, MytripsComponent, POIsComponent, FavoritesComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
