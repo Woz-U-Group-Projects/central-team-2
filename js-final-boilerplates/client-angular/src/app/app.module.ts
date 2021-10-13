@@ -14,10 +14,12 @@ import { POIsComponent } from './pois/pois.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { GoogleMapsModule } from '@angular/google-maps'
+
 
 @NgModule({
   declarations: [AppComponent, NavigationBarComponent, MainPageComponent, LoginComponent, TripsComponent, MytripsComponent, POIsComponent, FavoritesComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule, GoogleMapsModule ],
   providers: [],
   bootstrap: [AppComponent]
 })
