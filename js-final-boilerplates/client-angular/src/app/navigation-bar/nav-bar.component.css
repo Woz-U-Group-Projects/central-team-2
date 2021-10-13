@@ -7,11 +7,11 @@
 }
 
 .active-cyan input[type=text] {
-    border-bottom: 1px solid #4dd0e1;
-    box-shadow: 0 1px 0 0 #4dd0e1;
+    border-bottom: 1px solid #30c337;
+    box-shadow: 0 1px 0 0 #30c337;
     }
     
 .active-cyan .fa,.active-cyan-2 .fa {
-    color: #4dd0e1;
+    color: #30c337;
     }
     
