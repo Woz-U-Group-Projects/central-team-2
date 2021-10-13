@@ -1,8 +1,6 @@
-.navbar-brand{
-    Color:Green,
-    font-style bold,
-};
-
-font{
-    Color:Green
+.navbar{
+    background-color: rgb(245, 245, 128);
+}
+.btn{
+    font: bolder, rgb(35, 143, 35);
 }
