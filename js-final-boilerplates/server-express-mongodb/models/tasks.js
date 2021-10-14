@@ -8,6 +8,8 @@ var TaskSchema = new Schema({
   complete: { type: Boolean, required: true }
 });
 
+const Task = mongoose.model("Tasks", TaskSchema)
+
 // Duplicate the ID field.
 TaskSchema.virtual("id").get(function() {
   return this._id.toHexString();

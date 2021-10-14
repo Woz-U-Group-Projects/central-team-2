@@ -1,0 +1,41 @@
+
+    <nav class="navbar">
+        <li>
+            <a href="/" class="nav-links">HOME</a>
+        </li>
+        <li>
+            <a href="/signup" class="nav-links">SIGN UP</a>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+<style>
+    li{  
+    border:solid 1px green;  
+    display:inline-block;
+    
+}
+    ul{  
+    border:solid 1px black;  
+    padding:0;
+}
+    a{  
+    border:solid 1px red;
+}
+    
+</style>
+
+<h1>
+    Login Page
+</h1>
+<form action="/login" method="POST">
+    <label for="username">UserName</label>
+    <input type="text" placeholder="username" id="xyz" name="username">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="Login">
+</form>
+

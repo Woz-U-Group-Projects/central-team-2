@@ -14,11 +14,15 @@ import { POIsComponent } from './components/pois/pois.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateAccountComponent } from './components/signup/create-account.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { TaskDisplayComponent } from "./task-display/task-display.component";
+
 
 @NgModule({
-  declarations: [AppComponent, NavigationBarComponent, MainPageComponent, LoginComponent, TripsComponent, MytripsComponent, POIsComponent, FavoritesComponent, CreateAccountComponent],
+  declarations: [AppComponent, NavigationBarComponent,TaskDisplayComponent, MainPageComponent, SignupComponent, LoginComponent,  TripsComponent, MytripsComponent, POIsComponent, FavoritesComponent, CreateAccountComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}

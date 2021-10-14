@@ -8,6 +8,7 @@ import { POIsComponent } from './components/pois/pois.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { CreateAccountComponent } from './components/signup/create-account.component';
 
+import { TaskDisplayComponent } from './task-display/task-display.component';
 
 const routes: Routes = [  {
   path: 'home',
