@@ -1,6 +1,3 @@
-font{
-    Color:Green
-}
 
 .button1 {
     background-color: white;
@@ -23,3 +20,21 @@ font{
     background-color: #008CBA;
     color: white;
   }
+
+  .divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+.divider2{
+  width: 70px;
+  height:auto;
+  display:inline-block;
+}
+
+.butts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

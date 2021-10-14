@@ -1,3 +1,5 @@
-font{
-    Color:Green
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
