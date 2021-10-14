@@ -9,13 +9,13 @@ const userModel = require("./models/signup")
 
 
 // add user from database
-const username = "dbuser";
+const username = "";
 // add you user password 
-const password = "bUziMahGB01iX2Yx";
+const password = "";
 // add cluster name
-const cluster = "cluster0";
+const cluster = "";
 // add database name
-const dbname = "myFirstDatabase";
+const dbname = "";
 
 
 
@@ -56,7 +56,7 @@ app.use("/signup", signupRouter);
 
  
 // place you mongodb user password. ex: dbuser:123niuh2@...
-mongoose.connect('mongodb://dbuser:bUziMahGB01iX2Yx@cluster0-shard-00-00.f0ul2.mongodb.net:27017,cluster0-shard-00-01.f0ul2.mongodb.net:27017,cluster0-shard-00-02.f0ul2.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-8cxe5c-shard-0&authSource=admin&retryWrites=true&w=majority',
+mongoose.connect('',
 {
   useNewUrlParser: true,
   useFindAndModify: false,
