@@ -6,9 +6,9 @@ import { TripsComponent } from './components/trips/trips.component';
 import { MytripsComponent } from './components/mytrips/mytrips.component';
 import { POIsComponent } from './components/pois/pois.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
-import { CreateAccountComponent } from './components/signup/create-account.component';
+import { SignupComponent } from './components/signup/signup.component';
 
-import { TaskDisplayComponent } from './task-display/task-display.component';
+import { TaskDisplayComponent } from '../app/task-display/task-display.component';
 
 const routes: Routes = [  {
   path: 'home',
@@ -35,13 +35,13 @@ const routes: Routes = [  {
   component: FavoritesComponent
 },
 {
-  path: 'create-account',
-  component: CreateAccountComponent
+  path: 'signup',
+  component: SignupComponent 
 },
-// {
-//   path: 'search',
-//   component: SearchComponent
-// },
+{
+  path: 'search',
+  component: TaskDisplayComponent
+},
 {
   path: '',
   redirectTo: '/home',
