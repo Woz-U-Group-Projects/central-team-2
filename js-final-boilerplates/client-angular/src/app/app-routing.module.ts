@@ -6,6 +6,7 @@ import { TripsComponent } from './trips/trips.component';
 import { MytripsComponent } from './mytrips/mytrips.component';
 import { POIsComponent } from './pois/pois.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 
 const routes: Routes = [  {
@@ -31,6 +32,10 @@ const routes: Routes = [  {
 {
   path: 'favorites',
   component: FavoritesComponent
+},
+{
+  path: 'create-account',
+  component: CreateAccountComponent
 },
 // {
 //   path: 'search',
