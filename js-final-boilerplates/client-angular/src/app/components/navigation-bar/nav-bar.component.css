@@ -1,0 +1,17 @@
+.navbar{
+    background-color: rgb(245, 245, 128);
+}
+
+.navbar-brand{
+    font: bolder, rgb(35, 143, 35);
+}
+
+.active-cyan input[type=text] {
+    border-bottom: 1px solid #30c337;
+    box-shadow: 0 1px 0 0 #30c337;
+    }
+    
+.active-cyan .fa,.active-cyan-2 .fa {
+    color: #30c337;
+    }
+    

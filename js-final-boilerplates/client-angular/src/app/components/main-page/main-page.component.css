@@ -1,0 +1,40 @@
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+  }
+  
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+
+  .divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+.divider2{
+  width: 70px;
+  height:auto;
+  display:inline-block;
+}
+
+.butts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
