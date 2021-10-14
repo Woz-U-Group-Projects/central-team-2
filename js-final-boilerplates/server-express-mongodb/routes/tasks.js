@@ -1,10 +1,13 @@
 var express = require("express");
 var router = express.Router();
-var TaskModel = require("../models/task");
+var TaskModel = require("../models/tasks");
 
 router.get("/", function(req, res, next) {
-  TaskModel.find().then(tasks => res.json(tasks));
+  TaskModel.find("task").then(tasks => res.json(tasks));
 });
+
+
+
 
 router.post("/", function(req, res, next) {
   let newTask = new TaskModel();
@@ -19,6 +22,8 @@ router.delete("/:id", function(req, res, next) {
     res.send(task);
   });
 });
+
+
 
 router.put("/:id", function(req, res, next) {
   TaskModel.findByIdAndUpdate(
