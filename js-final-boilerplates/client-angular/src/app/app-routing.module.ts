@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainPageComponent } from './main-page/main-page.component';
-import { LoginComponent } from './login/login.component';
-import { TripsComponent } from './trips/trips.component';
-import { MytripsComponent } from './mytrips/mytrips.component';
-import { POIsComponent } from './pois/pois.component';
-import { FavoritesComponent } from './favorites/favorites.component';
-import { CreateAccountComponent } from './create-account/create-account.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { TripsComponent } from './components/trips/trips.component';
+import { MytripsComponent } from './components/mytrips/mytrips.component';
+import { POIsComponent } from './components/pois/pois.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
+import { CreateAccountComponent } from './components/signup/create-account.component';
 
 
 const routes: Routes = [  {

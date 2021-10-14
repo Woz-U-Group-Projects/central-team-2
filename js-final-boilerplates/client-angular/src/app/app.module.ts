@@ -5,15 +5,15 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
-import { NavigationBarComponent } from './navigation-bar/nav-bar.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { LoginComponent } from './login/login.component';
-import { TripsComponent } from './trips/trips.component';
-import { MytripsComponent } from './mytrips/mytrips.component';
-import { POIsComponent } from './pois/pois.component';
-import { FavoritesComponent } from './favorites/favorites.component';
+import { NavigationBarComponent } from './components/navigation-bar/nav-bar.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { TripsComponent } from './components/trips/trips.component';
+import { MytripsComponent } from './components/mytrips/mytrips.component';
+import { POIsComponent } from './components/pois/pois.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CreateAccountComponent } from './create-account/create-account.component';
+import { CreateAccountComponent } from './components/signup/create-account.component';
 
 @NgModule({
   declarations: [AppComponent, NavigationBarComponent, MainPageComponent, LoginComponent, TripsComponent, MytripsComponent, POIsComponent, FavoritesComponent, CreateAccountComponent],
