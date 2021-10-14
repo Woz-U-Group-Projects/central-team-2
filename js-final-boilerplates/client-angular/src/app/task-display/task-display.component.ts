@@ -12,8 +12,6 @@ export class TaskDisplayComponent implements OnInit {
   newTask: Task = new Task();
   tasks: Task[] = [];
 
-  
-
   getTasks() {
     this.taskService.getTasks().subscribe(tasks => (this.tasks = tasks));
   }
@@ -30,5 +28,4 @@ export class TaskDisplayComponent implements OnInit {
   ngOnInit() {
     this.getTasks();
   }
-
 }
