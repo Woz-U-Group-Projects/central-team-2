@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./build-atrip.component.css']
 })
 export class BuildATripComponent implements OnInit {
+  task: string;
+  tasks = [];
 
+  onClick(){
+    this.tasks.push({name: this.task});
+    this.task = '';
+  
+}
   constructor() { }
 
   ngOnInit() {
   }
 
 }
+

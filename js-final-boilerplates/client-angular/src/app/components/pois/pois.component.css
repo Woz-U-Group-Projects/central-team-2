@@ -1,0 +1,7 @@
+.pics{flex: auto;
+    max-width:400px;
+    max-height:300px;
+}
+.list{
+    background-color: rgb(243, 243, 181);
+}
