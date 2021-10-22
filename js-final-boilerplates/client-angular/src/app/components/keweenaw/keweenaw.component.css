@@ -1,0 +1,20 @@
+.callout{
+    background-color: rgb(243, 205, 134);
+}
+.list {
+    width: 300px;
+    padding: 10px; 
+    float: left;
+    padding-right: 60px;
+    padding-left: 60px;
+    background-color: rgb(178, 223, 178);
+}
+.leafpic{
+    padding: 10px;
+}
+.sunrise{
+    padding: 10px;
+}
+.mine{
+    background-color: rgb(238, 196, 155);
+}

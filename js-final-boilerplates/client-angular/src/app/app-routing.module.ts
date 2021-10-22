@@ -7,6 +7,8 @@ import { MytripsComponent } from './components/mytrips/mytrips.component';
 import { POIsComponent } from './components/pois/pois.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { BuildATripComponent } from './components/build-atrip/build-atrip.component';
+import { KeweenawComponent } from './components/keweenaw/keweenaw.component';
 
 import { TaskDisplayComponent } from '../app/task-display/task-display.component';
 
@@ -41,6 +43,14 @@ const routes: Routes = [  {
 {
   path: 'search',
   component: TaskDisplayComponent
+},
+{
+  path: 'build-atrip',
+  component: BuildATripComponent
+},
+{
+  path: 'keweenaw',
+  component: KeweenawComponent
 },
 {
   path: '',
