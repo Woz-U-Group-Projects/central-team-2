@@ -20,10 +20,11 @@ import { TripBuildsComponent } from './components/trip-builds/trip-builds.compon
 import { BuildATripComponent } from './components/build-atrip/build-atrip.component';
 import { HighlightedTripComponent } from './components/highlighted-trip/highlighted-trip.component';
 import { KeweenawComponent } from './components/keweenaw/keweenaw.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
-  declarations: [AppComponent, NavigationBarComponent,TaskDisplayComponent, MainPageComponent, SignupComponent, LoginComponent,  TripsComponent, MytripsComponent, POIsComponent, FavoritesComponent, CreateAccountComponent, TripBuildsComponent, BuildATripComponent, HighlightedTripComponent, KeweenawComponent],
+  declarations: [AppComponent, NavigationBarComponent,TaskDisplayComponent, MainPageComponent, SignupComponent, LoginComponent,  TripsComponent, MytripsComponent, POIsComponent, FavoritesComponent, CreateAccountComponent, TripBuildsComponent, BuildATripComponent, HighlightedTripComponent, KeweenawComponent, ProfileComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]

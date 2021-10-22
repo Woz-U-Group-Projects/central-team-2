@@ -9,6 +9,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { BuildATripComponent } from './components/build-atrip/build-atrip.component';
 import { KeweenawComponent } from './components/keweenaw/keweenaw.component';
+import { ProfileComponent } from './components/profile/profile.component'
 
 import { TaskDisplayComponent } from '../app/task-display/task-display.component';
 
@@ -35,6 +36,10 @@ const routes: Routes = [  {
 {
   path: 'favorites',
   component: FavoritesComponent
+},
+{
+  path: 'profile',
+  component: ProfileComponent
 },
 {
   path: 'signup',
