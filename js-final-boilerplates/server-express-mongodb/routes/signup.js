@@ -1,35 +1,21 @@
 
 var express = require("express");
-var router = express.Router();
+const router = express.Router();
 var mongo = require('mongodb');
+const index = require('./index');
 const app = express();
 const userModel = require("../models/signup");
+const { models } = require("mongoose");
+var findOrCreate = require('mongoose-findorcreate')
 
-
-app.get('/', function(req, res, next){
-    res.render('signup', {title: 'Sign up'
-    });
-  });
-
-app.post('/', async (request, response) => {
-    const user = new userModel(request.body);
-    try {
-      await user.save();
-      response.send(user);
-    } catch (error) {
-      response.status(500).send(error);
-    }
+app.get("/",(req, res) => {
+  res.render('index' , {title: 'Home'})
+ 
 });
 
-app.get("/users", async (request, response) => {
-    const users = await userModel.find({});
+
+
   
-    try {
-      response.send(user);
-    } catch (error) {
-      response.status(500).send(error);
-    }
-  });
 
  
 
