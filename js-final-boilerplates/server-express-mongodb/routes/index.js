@@ -7,21 +7,58 @@ const app = express();
 
 
 
-router.get('/', function(req, res, next){
-  res.render('index', {title: 'Sign up'
+const { models } = require('mongoose');
+
+
+
+
+
+
+app.get("/",(req, res) => {
+  res.render('index' , {title: 'Home'})
+ 
+});
+
+app.get('/login', function(req, res, next){
+  res.render('login', {title: 'Login'
   });
 });
 
-router.get('/', function(req, res, next) {
-  res.send(JSON.stringify(
-    signup
-   ));
-  });
 
-  router.get('/', function(req, res, next){
-    res.render('login', {title: 'Log in' 
-   });
+
+app.get('/signup', function(req, res, next){
+  res.render('signup', {title: 'Sign up'
   });
+});
+
+router.get('/', async (req, res) => {
+  try {
+    await sendItems(req.userId, res);
+  } catch (error) {
+    console.error(error);
+    res.sendStatus(500);
+  }
+});
+
+app.get('/profile', function(req, res, next){
+  res.render('profile', {title: 'Welcome to your profile'
+  });
+});
+
+
+
+ 
+  app.post('/signup', async (request, response, next) => {
+    const user = new signup(request.body);
+    
+    
+    try {
+      await user.save();
+      response.send(user);
+    } catch (error) {
+      response.status(500).send(error);
+    } 
+});
 
   
   
@@ -31,4 +68,4 @@ router.get('/', function(req, res, next) {
 
 
 
-  module.exports = router;
+  module.exports = app;
