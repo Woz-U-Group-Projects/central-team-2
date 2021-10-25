@@ -1,21 +1,20 @@
-var express = require("express");
+var express = require('express');
 var router = express.Router();
-var mongo = require("mongodb");
-var assert = require("assert");
-const loginModel = require("../models/login");
+var mongo = require('mongodb');
+var assert = require('assert');
+
+
 const app = express();
+var url = 'mongodb:localhost:3000/login';
+const loginModel = require("../models/login");
 
-var url = "http://localhost:3001/login";
-
-app.get('/login', function(req, res, next){
-  res.redirect('login');
+app.get("/", function (req, res) {
+    res.render("login");
 });
 
 
-  
 
-  
 
-  
 
-module.exports = app;
+
+  module.exports = app;
