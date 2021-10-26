@@ -3,19 +3,15 @@ const router = express.Router();
 var mongo = require('mongodb');
 const index = require('./index');
 const app = express();
+const profile = require('../models/profile');
 const userModel = require("../models/signup");
-const { models } = require("mongoose");
-var findOrCreate = require('mongoose-findorcreate')
 
-app.get("/",(req, res) => {
-  res.render('index' , {title: 'Home'})
- 
-});
-
- 
-
-  
+app.get('/', function(req, res, next){
+    res.render('profile', {title: 'Welcome to your profile'
+    });
+  });
 
 
 
-  module.exports = app;
+
+module.exports = app;
