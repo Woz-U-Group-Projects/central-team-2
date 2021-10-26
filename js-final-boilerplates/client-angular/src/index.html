@@ -3,17 +3,9 @@
   <title>TripBuilder</title>
 
   <head>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <meta
-      charset="utf-8"
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
     <base href="/" />
     <link rel="icon" href="./src/favicon.ico" type="image/x-icon" />
     <app-navigation-bar></app-navigation-bar>
@@ -21,27 +13,28 @@
   <body>
     <app-root></app-root>
     <router-outlet></router-outlet>
+   <!-- Bootstrap CSS Script-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 
-  <!-- Footer with Update Date & Contact a-->
+  <!-- Footer with Update Date, Contact and Social Media Links (TripBuilder social media links when accounts created)-->
+  <br/>
   <footer class="footer">
-    <div class="container" style="text-align: center">
+    <div class="w3-container" style="text-align:center;" id="SocMdLinks">
       <a class="text-muted">TripBuilder last update 10/2021</a>
-      <a href="mailto:zak_ku@yahoo.com"
-        >Contact Us
-        <img
-          src="assets/icons/iconfinder_social-media_email_new_5066047.png"
-          height="30"
-          width="30"
-        /> </a
-      ><br />
-      <!-- weather widget start --><a
-        target="_blank"
-        href="https://www.booked.net/weather/dallas-26868,18103,18360"
-        ><img
-          src="https://w.bookcdn.com/weather/picture/2_26868,18103,18360_0_1_009fde_250_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=w209&anc_id=63636"
-          alt="booked.net" /></a
-      ><!-- weather widget end -->
+      <a href="mailto:zak_ku@yahoo.com">Contact Us <img src="assets/icons/5066047_communication_email_envelope_letter_mail_icon.png"
+        class="sm-link" height="40" width="40"></a>
+      <a href="https://www.facebook.com/"> <img src="assets/icons/1543325_facebook_social media_icon.png" class="sm-link" height="40" width="40" alt="Facebook"></a>
+      <a href="https://www.instagram.com/"> <img src="assets/icons/1885169_social media_camera_instagram_app_photo_icon.png" class="sm-link" height="40" width="40" alt="IG"></a>
+      <a href="https://twitter.com/"> <img src="assets/icons/1543317_social media_network_twitter_icon.png" class="sm-link" height="40" width="40" alt="Twitter"></a>
+      <a href="https://www.youtube.com/"> <img src="assets/icons/1543314_network_youtube_social media_icon.png" class="sm-link" height="40" width="40" alt="YouTube"></a>
+    </a>
+    <br />
+    <!-- weather widget start -->
+    <a target="_blank" href="https://www.booked.net/weather/dallas-26868,18103,18360">
+      <img src="https://w.bookcdn.com/weather/picture/2_26868,18103,18360_0_1_009fde_250_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=w209&anc_id=63636" alt="booked.net" />
+    </a>
+    <!-- weather widget end -->
     </div>
   </footer>
 </html>

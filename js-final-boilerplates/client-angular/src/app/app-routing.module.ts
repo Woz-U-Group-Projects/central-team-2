@@ -7,7 +7,9 @@ import { MytripsComponent } from './components/mytrips/mytrips.component';
 import { POIsComponent } from './components/pois/pois.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { ProfileComponent } from './profile/profile.component';
+import { BuildATripComponent } from './components/build-atrip/build-atrip.component';
+import { KeweenawComponent } from './components/keweenaw/keweenaw.component';
+import { ProfileComponent } from './components/profile/profile.component'
 
 import { TaskDisplayComponent } from '../app/task-display/task-display.component';
 
@@ -18,10 +20,6 @@ const routes: Routes = [  {
 {
   path: 'login',
   component: LoginComponent
-},
-{
-  path: 'profile',
-  component: ProfileComponent
 },
 {
   path: 'trips',
@@ -40,12 +38,24 @@ const routes: Routes = [  {
   component: FavoritesComponent
 },
 {
+  path: 'profile',
+  component: ProfileComponent
+},
+{
   path: 'signup',
-  component: SignupComponent
+  component: SignupComponent 
 },
 {
   path: 'search',
   component: TaskDisplayComponent
+},
+{
+  path: 'build-atrip',
+  component: BuildATripComponent
+},
+{
+  path: 'keweenaw',
+  component: KeweenawComponent
 },
 {
   path: '',

@@ -1,0 +1,11 @@
+.btn{
+    height: fit-content;
+}
+.form-control, .listed, .a{
+    margin-left: 50px;
+    float: left;
+}
+.map{
+    float: right;
+    width:500px;
+}

@@ -4,7 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import {AuthService } from "./auth/auth.service"
+import { AuthService } from "./auth/auth.service"
 
 import { NavigationBarComponent } from "./components/navigation-bar/nav-bar.component";
 import { MainPageComponent } from "./components/main-page/main-page.component";
@@ -16,11 +16,14 @@ import { FavoritesComponent } from "./components/favorites/favorites.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 
-
+import { TripBuildsComponent } from './components/trip-builds/trip-builds.component';
+import { BuildATripComponent } from './components/build-atrip/build-atrip.component';
+import { HighlightedTripComponent } from './components/highlighted-trip/highlighted-trip.component';
+import { KeweenawComponent } from './components/keweenaw/keweenaw.component';
+import { ProfileComponent } from './components/profile/profile.component';
 import { SignupComponent } from "./components/signup/signup.component";
 import { TaskDisplayComponent } from "./task-display/task-display.component";
-import { ProfileComponent } from './profile/profile.component';
-import { LogoutComponent } from './logout/logout.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,11 @@ import { LogoutComponent } from './logout/logout.component';
     FavoritesComponent,
     ProfileComponent,
     LogoutComponent,
+    TripBuildsComponent, 
+    BuildATripComponent, 
+    HighlightedTripComponent, 
+    KeweenawComponent,
+    
   ],
   imports: [
     BrowserModule,
