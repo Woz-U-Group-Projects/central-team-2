@@ -1,4 +1,3 @@
-
 var express = require("express");
 const router = express.Router();
 var mongo = require('mongodb');
@@ -27,9 +26,3 @@ app.get("/",(req, res) => {
 
 
   module.exports = app;
-
-
-
-
-
-  
