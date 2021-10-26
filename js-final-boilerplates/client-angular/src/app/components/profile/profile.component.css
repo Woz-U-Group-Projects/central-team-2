@@ -1,0 +1,29 @@
+h1{
+  padding: 50px;
+  background-color: grey;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+h2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: grey;
+  width: 100%;
+  height: auto
+
+
+}
+
+button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 50%;
+  height: auto
+}
+

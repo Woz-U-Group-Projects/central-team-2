@@ -1,12 +1,33 @@
+<div style="text-align: center">
+  <h1>Welcome  </h1><br>
+  <h2>{{ model.username }}</h2>
+  <br />
 
-<h1 style="text-align:center;">
-    Login Page
-</h1>
-<form style="text-align:center;" action="/login" method="POST">
-    <label for="username">UserName</label>
-    <input type="text" placeholder="username" id="xyz" name="username">
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password">
-    <input type="submit" value="Login">
+<h1>
+    Please Login
+</h1><br><br>
+<form #form="ngForm" (ngSubmit)="onsubmit(form)" novalidate>
+  <div class="container" style="text-align: center">
+    <label for="username">Username</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      required
+      [(ngModel)]="model.username"
+    />
+    <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        [(ngModel)]="model.password"
+      />
+      <button>Submit</button>
+
+    </div>
+
 </form>
+
+
 

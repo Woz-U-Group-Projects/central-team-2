@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpBackend, HttpClient,  HttpHeaders } from '@angular/common/http';
+import { AuthService } from '../../auth/auth.service';
+import { Router } from '@angular/router';
+import { Profile } from '../../models/profile';
+import { LogoutComponent } from '../logout/logout.component';
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +11,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  http: HttpClient;
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+
+
   }
 
 }
+

@@ -7,10 +7,17 @@ const userModel = require("../models/signup");
 const { models } = require("mongoose");
 var findOrCreate = require('mongoose-findorcreate')
 
+var url = "http://localhost:3001/signup";
+
 app.get("/",(req, res) => {
-  res.render('index' , {title: 'Home'})
+  res.render('signup' , {title: 'Signup'})
  
 });
+
+
+
+
+  
 
  
 
