@@ -7,8 +7,8 @@ const app = express();
 
 var url = "http://localhost:3001/login";
 
-app.get('/login', function(req, res, next){
-  res.redirect('login');
+app.get('/', function(req, res){
+  res.render('login');
 });
 
 

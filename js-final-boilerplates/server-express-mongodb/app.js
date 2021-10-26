@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const userModel = require("./models/signup");
 const bodyParser= require('body-parser');
 const handlebars  = require('express-handlebars');
-
+var passport = require("passport");
 
 // add user from database
 const username = "dbuser";
@@ -28,6 +28,10 @@ var signupRouter = require("./routes/signup")
 
 var app = express();
 
+var corsOptions = {
+  origin: "http://localhost:3001"
+};
+
 // view engine setup
 
 app.set('views', path.join(__dirname, 'views'));
@@ -40,6 +44,8 @@ app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
 });
+
+
 
 
 
@@ -61,6 +67,7 @@ app.use("/signup", signupRouter);
 
 
 var mongo = require('mongodb');
+const Login = require("./models/login");
 
 
 
@@ -70,7 +77,7 @@ var mongo = require('mongodb');
 
  
 // place you mongodb user password. ex: dbuser:123niuh2@...
-mongoose.connect('mongodb://dbuser:2sQ5OgGYUdqH8slP@cluster0-shard-00-00.f0ul2.mongodb.net:27017,cluster0-shard-00-01.f0ul2.mongodb.net:27017,cluster0-shard-00-02.f0ul2.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-8cxe5c-shard-0&authSource=admin&retryWrites=true&w=majority',
+mongoose.connect('mongodb://dbuser:neTOwbaPUpybPooF@cluster0-shard-00-00.f0ul2.mongodb.net:27017,cluster0-shard-00-01.f0ul2.mongodb.net:27017,cluster0-shard-00-02.f0ul2.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-8cxe5c-shard-0&authSource=admin&retryWrites=true&w=majority',
 {
   useNewUrlParser: true,
   useFindAndModify: false,
@@ -83,6 +90,41 @@ db.once("open", function () {
   console.log("Connected successfully");
 });
 
+function initial() {
+  Signup.estimatedDocumentCount((err, count) => {
+    if (!err && count === 0) {
+      new Signup({
+        name: "user"
+      }).save(err => {
+        if (err) {
+          console.log("error", err);
+        }
+
+        console.log("added 'user' to roles collection");
+      });
+
+      new Login({
+        name: "moderator"
+      }).save(err => {
+        if (err) {
+          console.log("error", err);
+        }
+
+        console.log("added 'moderator' to roles collection");
+      });
+
+      new Signup({
+        name: "admin"
+      }).save(err => {
+        if (err) {
+          console.log("error", err);
+        }
+
+        console.log("added 'admin' to roles collection");
+      });
+    }
+  });
+}
 
 
 

@@ -1,6 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Signup } from 'src/app/models/signup';
+import { HttpBackend, HttpClient,  HttpHeaders } from '@angular/common/http';
+import { Signup } from '../../models/signup';
+
+import { FormBuilder, FormGroup, Validators, FormControl } from "@angular/forms";
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+
+import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -9,14 +15,40 @@ import { Signup } from 'src/app/models/signup';
 })
 export class SignupComponent implements OnInit {
   signups: Signup[];
-  @Input() dataPath: string;
+  model: Signup = new Signup();
+  addForm: FormGroup;
+  http: HttpClient;
+  constructor(private authService: AuthService, private router: Router) { }
 
-  constructor(private http: HttpClient) { }
 
-  ngOnInit() {
-    this.http.get<Signup[]>(this.dataPath).subscribe(signups =>{
-      this.signups;
+
+  ngOnInit() {}
+
+  signup(form) {
+    console.log(form.value);
+    this.authService.signup(form.value).subscribe((res) => {
+      this.router.navigateByUrl('login');
     });
   }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

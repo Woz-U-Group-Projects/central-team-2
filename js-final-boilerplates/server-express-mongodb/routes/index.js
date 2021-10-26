@@ -3,11 +3,17 @@ var router = express.Router();
 var mongo = require('mongodb');
 var assert = require('assert');
 var signup = require('../models/signup')
+
 const app = express();
-
-
+var findOrCreate = require('mongoose-findorcreate');
+const userModel = require("../models/signup");
+const loginModel = require("../models/login")
+const mongoose = require("mongoose");
 
 const { models } = require('mongoose');
+const { db } = require('../models/signup');
+const { response } = require('express');
+
 
 
 
@@ -31,38 +37,54 @@ app.get('/signup', function(req, res, next){
   });
 });
 
-router.get('/', async (req, res) => {
+
+
+
+
+
+
+app.post('/signup', async (request, response, next) => {
+  const user = new userModel(request.body);
+  
   try {
-    await sendItems(req.userId, res);
+    await user.save();
+    response.redirect('/login');
   } catch (error) {
-    console.error(error);
-    res.sendStatus(500);
-  }
+    response.status(500).send(error);
+  } 
 });
 
-app.get('/profile', function(req, res, next){
+
+
+
+app.post('/login',function(req,res){
+  var username = req.body.username;
+  var password = req.body.password;
+  console.log("User name = "+username+", password is "+password);
+  res.redirect("profile")
+  });
+
+  app.get('/profile', function(req, res, next){
   res.render('profile', {title: 'Welcome to your profile'
   });
 });
-
-
-
  
-  app.post('/signup', async (request, response, next) => {
-    const user = new signup(request.body);
-    
-    
-    try {
-      await user.save();
-      response.send(user);
-    } catch (error) {
-      response.status(500).send(error);
-    } 
-});
-
-  
-  
- 
+app.get('/profile', function (req, res, next) {
+  models.user
+    .findByPk(parseInt(req.params.id))
+    .then(user => {
+      if (user) {
+        res.render('profile', {
+          firstname: user.firstname,
+          lastname: user.lastname,
+          email: user.email,
+          username: user.username
+        });
+      } else {
+        res.send('User not found');
+      }
+    });
+  });
 
 
 
