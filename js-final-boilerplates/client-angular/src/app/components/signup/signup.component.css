@@ -1,6 +1,6 @@
 .container {
   padding: 50px;
-  background-color: grey;
+  background-color: rgb(199, 198, 198);
 }
 input[type=text], input[type=password] {
   width: 100%;
@@ -8,7 +8,18 @@ input[type=text], input[type=password] {
   margin: 5px 0 22px 0;
   display: inline-block;
   border: black;
-  background: grey;
-  background-color: yellow;
-  outline:black;
+  background: rgb(212, 211, 211);
+  background-color: rgb(235, 235, 155);
+  outline:rgb(95, 97, 212);
+}
+
+.button {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.button:hover {
+  background-color: #008CBA;
+  color: white;
 }
