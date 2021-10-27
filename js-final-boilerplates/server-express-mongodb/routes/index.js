@@ -3,7 +3,7 @@ var router = express.Router();
 var mongo = require('mongodb');
 var assert = require('assert');
 var signup = require('../models/signup')
-var navigationBar = require('../../client-angular/src/app/components/navigation-bar/nav-bar.component')
+
 
 const app = express();
 var findOrCreate = require('mongoose-findorcreate');

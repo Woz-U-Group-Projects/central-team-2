@@ -19,7 +19,7 @@ const cluster = "cluster0";
 const dbname = "myFirstDatabase";
 
 
-var usersRouter = require("./routes/users")
+
 var indexRouter = require("./routes/index")
 var loginRouter = require("./routes/login")
 var tasksRouter = require("./routes/tasks");
@@ -56,7 +56,7 @@ app.use(cookieParser());
 app.use(express.static(path.join( __dirname,'./dist/client')));
 app.use(cors());
 
-app.use("/users", usersRouter)
+
 app.use("/", indexRouter);
 app.use("/tasks", tasksRouter);
 app.use("/login", loginRouter);
