@@ -24,6 +24,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { SignupComponent } from "./components/signup/signup.component";
 import { TaskDisplayComponent } from "./task-display/task-display.component";
 import { LogoutComponent } from './components/logout/logout.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { LogoutComponent } from './components/logout/logout.component';
     TripBuildsComponent, 
     BuildATripComponent, 
     HighlightedTripComponent, 
-    KeweenawComponent,
+    KeweenawComponent, FooterComponent,
     
   ],
   imports: [
