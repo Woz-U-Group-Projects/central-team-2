@@ -27,11 +27,11 @@ export class SignupComponent implements OnInit {
   signup(form) {
     console.log(form.value);
     this.authService.signup(form.value).subscribe((res) => {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/profile']);
     });
   }
   onsubmit() {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/profile']);
   }
   }
   
