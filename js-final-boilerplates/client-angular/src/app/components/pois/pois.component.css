@@ -1,7 +1,8 @@
-.pics{flex: auto;
-    max-width:400px;
-    max-height:300px;
-}
+.pics {
+    border-radius: 40%;
+    max-width: 33%;
+    height: auto;
+  }
 .list{
     background-color: rgb(243, 243, 181);
 }
