@@ -1,5 +1,6 @@
 .callout{
     background-color: rgb(243, 205, 134);
+    align-items: center;
 }
 .list {
     width: 300px;
@@ -18,3 +19,15 @@
 .mine{
     background-color: rgb(238, 196, 155);
 }
+
+img {
+    border-radius: 40%;
+    max-width: 50%;
+    height: auto;
+  }
+
+.img2 {
+    border-radius: 0%;
+    max-width: 50%;
+    height: auto;
+  }
