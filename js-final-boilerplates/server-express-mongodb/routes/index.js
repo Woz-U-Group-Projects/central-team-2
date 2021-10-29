@@ -49,6 +49,7 @@ app.post('/signup', async (request, response, next) => {
   
   try {
     await user.save();
+    console.log("User Created");
     //response.redirect('/login');
   } catch (error) {
     response.status(500).send(error);
