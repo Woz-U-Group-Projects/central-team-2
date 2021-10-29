@@ -87,8 +87,4 @@ app.get('/profile', function (req, res, next) {
     });
   });
 
-
-
-
-
   module.exports = app;

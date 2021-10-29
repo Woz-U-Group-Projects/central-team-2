@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const app = express();
+var jwt = require("jsonwebtoken"); 
 
 var models = require('../models/signup');
 /* GET users listing. */
@@ -44,5 +45,10 @@ app.post('/login', function(req, res, next) {
       }
     });
 });
+
+router.get('/logout', function (req, res, next) {
+  res.cookie('jwt', "", { expires: new Date(0) });
+  res.send('Logged out');
+  });
 
 module.exports = app;
