@@ -38,7 +38,7 @@ checkDuplicateUsernameOrEmail = (req, res, next) => {
 
 checkLoginsExisted = (req, res, next) => {
   if (req.body.login) {
-    for (let i = 0; i < req.body.roles.length; i++) {
+    for (let i = 0; i < req.body.login.length; i++) {
       if (!LOGIN.includes(req.body.login[i])) {
         res.status(400).send({
           message: `Failed! Login ${req.body.login[i]} does not exist!`
